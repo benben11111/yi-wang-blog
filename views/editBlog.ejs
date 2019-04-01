@@ -41,13 +41,13 @@
           }
 
           $.ajax({
-              url: "/blogs/<%= targetBlog._id %>",
+              url: "/allBlogs/<%= targetBlog._id %>",
               type: "PUT",
               data: blog
           })
 
           
-          window.location="/blogs/<%= targetBlog._id %>";
+          window.location="/allBlogs/<%= targetBlog._id %>";
 
           });
       });

@@ -25,7 +25,7 @@ router.get("/allBlogs", (req, res) => {
 });
 
 // Go to the blog page
-router.get("/blogs", verifyLogin, (req, res) => {
+router.get("/myBlogs", verifyLogin, (req, res) => {
   User.findOne({ username: req.user.username })
     .populate("blogs")
     .exec((err, user) => {
@@ -34,7 +34,7 @@ router.get("/blogs", verifyLogin, (req, res) => {
         res.send(err);
       }
       //console.log(req.user.blogs);
-      res.render("blogs", { blogs: user.blogs });
+      res.render("myBlogs", { blogs: user.blogs });
     });
   //         , (err, blogs) => {
   //     if (err) {
@@ -116,7 +116,7 @@ router.delete("/blogs/:id", verifyLogin, (req, res) => {
 });
 
 // Edit a blog
-router.get("/blogs/:id/edit", verifyLogin, (req, res) => {
+router.get("/allBlogs/:id/edit", verifyLogin, (req, res) => {
   Blog.findById(req.params.id, (err, targetBlog) => {
     if (err) {
       throw new Error();
@@ -126,7 +126,7 @@ router.get("/blogs/:id/edit", verifyLogin, (req, res) => {
 });
 
 // Update the blog
-router.put("/blogs/:id", verifyLogin, (req, res) => {
+router.put("/allBlogs/:id", verifyLogin, (req, res) => {
   Blog.findByIdAndUpdate(req.params.id, req.body, (err, blog) => {
     if (err) {
       throw new Error();

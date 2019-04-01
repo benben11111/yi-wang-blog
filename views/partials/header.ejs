@@ -57,11 +57,7 @@
                       >Blogs</a
                     >
                   </li>
-                <li class="nav-item">
-                  <a href="/blogs" class="nav-link menu-item m-2 text-light h4"
-                    >My Blog</a
-                  >
-                </li>
+                
                 <% if(!activeUser) {%>
                 <li class="nav-item">
                   <a href="/login" class="nav-link menu-item m-2 text-light h4"
@@ -69,6 +65,11 @@
                   >
                 </li>
               <%} else {%>
+                <li class="nav-item">
+                    <a href="/myBlogs" class="nav-link menu-item m-2 text-light h4"
+                      >My Blog</a
+                    >
+                  </li>
                 <li class="nav-item">
                     <a href="/addNewBlog" class="nav-link menu-item m-2 text-light h4"
                       >Add New Blog</a

@@ -40,14 +40,14 @@
                 <%=blog.date%></p>
             </div>
           </div>
-          <!-- <% if(activeUser){%>
+          <% if(activeUser){%>
             <div class="col-lg-1 max-auto">
-                <a style="margin-top: 20px" href="/blogs/<%= blog._id %>/edit" class="btn btn-outline-warning">Edit</a>
+                <a style="margin-top: 20px" href="/allBlogs/<%= blog._id %>/edit" class="btn btn-outline-warning">Edit</a>
                 <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
                   <button style="margin-top: 20px" class="btn btn-outline-danger" id="delete-button">Delete</button>
                 </form>
             </div>
-          <%}%>  -->
+          <%}%> 
           
         </div>
 </div>
