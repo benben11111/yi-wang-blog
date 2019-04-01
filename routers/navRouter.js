@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
 });
 
 // Go to the contact page
-router.get("/contact", (req, res) => {
+router.get("/contactMe", (req, res) => {
   res.render("contact");
 });
 

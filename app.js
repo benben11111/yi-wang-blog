@@ -5,12 +5,13 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
-// const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 require("./database/mongoose");
 const User = require("./models/user");
 const userRouter = require("./routers/userRouter");
 const blogRouter = require("./routers/blogRouter");
 const navRouter = require("./routers/navRouter");
+const contactRouter = require("./routers/contactRouter");
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use((req, res, next) => {
 app.use(userRouter);
 app.use(blogRouter);
 app.use(navRouter);
+app.use(contactRouter);
 
 // Create the server for the project
 const port = process.env.PORT || 3000;
@@ -62,26 +64,3 @@ app.listen(port, err => {
   }
   console.log(`Server is up on port ${port}.`);
 });
-
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: "wangyi.benben@gmail.com",
-//     pass: "MQpe2012!"
-//   }
-// });
-
-// const mailOptions = {
-//   from: "wangyi.benben@gmail.com",
-//   to: "wangyi17@seas.upenn.edu",
-//   subject: "Sending My First Email",
-//   text: "That was easy!"
-// };
-
-// transporter.sendMail(mailOptions, (err, info) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(`Email sent: ${info.response}`);
-//   }
-// });
