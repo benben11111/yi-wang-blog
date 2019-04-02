@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const nodemailer = require("nodemailer");
 const User = require("../models/user");
 const Subcriber = require("../models/subscriber");
 const router = express.Router();
@@ -70,7 +71,31 @@ router.post("/subscribe", (req, res) => {
       console.log(err);
     } else {
       newSubcriber.save();
-      res.redirect("/");
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "finallyinnyc@gmail.com",
+          pass: "luanqibazao!!!"
+        }
+      });
+
+      const mailOptions = {
+        from: '"Yi Wang" <finallyinnyc@gmail.com>',
+        to: req.body.email,
+        cc: "finallyinnyc@gmail.com",
+        subject: `Hi ${req.body.name}! Thanks for your subscription!`,
+        text: "I look forward to updating you with my latest blog!"
+      };
+
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(`Email sent: ${info.response}`);
+        }
+
+        res.redirect("/");
+      });
     }
   });
 });

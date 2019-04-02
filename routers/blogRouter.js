@@ -13,15 +13,29 @@ const verifyLogin = (req, res, next) => {
   res.redirect("/login");
 };
 
+// // Go to the blog page
+// router.get("/allBlogs", (req, res) => {
+//   Blog.find({}, (err, blogs) => {
+//     if (err) {
+//       console.log(err);
+//       res.send(err);
+//     }
+//     res.render("blogs", { blogs });
+//   });
+// });
+
 // Go to the blog page
 router.get("/allBlogs", (req, res) => {
-  Blog.find({}, (err, blogs) => {
-    if (err) {
-      console.log(err);
-      res.send(err);
-    }
-    res.render("blogs", { blogs });
-  });
+  Blog.find()
+    .populate("owner")
+    .exec((err, blogs) => {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      } else {
+        res.render("blogs", { blogs });
+      }
+    });
 });
 
 // Go to the blog page
@@ -34,15 +48,8 @@ router.get("/myBlogs", verifyLogin, (req, res) => {
         res.send(err);
       }
       //console.log(req.user.blogs);
-      res.render("myBlogs", { blogs: user.blogs });
+      res.render("myBlogs", { blogs: user.blogs, username: req.user.username });
     });
-  //         , (err, blogs) => {
-  //     if (err) {
-  //       console.log(err);
-  //       res.send(err);
-  //     }
-  //     res.render("blogs", { blogs });
-  //   });
 });
 
 // Go to add new blog page to write a new blog
@@ -69,6 +76,7 @@ router.post("/addNewBlog", verifyLogin, (req, res) => {
         }
         blogCreator.blogs.push(newlyCreatedBlog);
         blogCreator.save();
+        //console.log(blogCreator);
       });
       //res.status(201).json(newlyCreatedBlog);
     })
@@ -82,6 +90,7 @@ router.post("/addNewBlog", verifyLogin, (req, res) => {
 router.get("/allBlogs/:id", (req, res) => {
   Blog.findById(req.params.id)
     .populate("comments")
+    .populate("owner")
     .exec((err, targetBlog) => {
       if (err) {
         //console.log(err);
