@@ -44,4 +44,113 @@ $(document).ready(function() {
       $(".pwc-text").removeClass("show-pwc-text");
     }
   });
+
+  // Gallery
+  $(".gallery-category").click(function() {
+    let value = $(this).attr("data-filter");
+    if (value === "all") {
+      $(".filter").show(300);
+    } else {
+      $(".filter")
+        .not("." + value)
+        .hide(300);
+      $(".filter")
+        .filter("." + value)
+        .show(300);
+    }
+  });
+});
+
+/*-------------------------------
+            Preloader
+---------------------------------*/
+
+$(window).on("load", () => {
+  $("#status").fadeOut();
+  $("#preloader")
+    .delay(350)
+    .fadeOut("slow");
+});
+
+/*-------------------------------
+            WOW
+---------------------------------*/
+
+//Initialize WOW
+$(() => {
+  new WOW().init();
+});
+
+/*-------------------------------
+            Animation
+---------------------------------*/
+
+// Animate the arrow down
+$(window).on("load", () => {
+  $("#arrow-down i").addClass("animated fadeInDown infinite");
+});
+
+/*-------------------------------
+            Google Map
+---------------------------------*/
+
+$(window).on("load", () => {
+  // Penn Address
+  const pennAddress = "University of Pennsylvania, Philadelphia, PA 19104";
+  // The location of Penn
+  const pennLocation = { lat: 39.952217, lng: -75.193214 };
+  // The map, centered at Penn
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: pennLocation
+  });
+  // The marker, positioned at Penn
+  const marker = new google.maps.Marker({
+    position: pennLocation,
+    map: map,
+    title: "Click to see address"
+  });
+  // Info Window
+  const infowindow = new google.maps.InfoWindow({
+    content: pennAddress
+  });
+  // Add click event when hovering onto the marker to show the info
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
+});
+
+/*-------------------------------
+            Navigation Bar
+---------------------------------*/
+$(() => {
+  $(window).scroll(() => {
+    if ($(window).scrollTop() > 50) {
+      // Add white-navbar class
+      $("nav").addClass("white-navbar");
+      // Show back to home button
+      $("#back-to-home").fadeIn();
+    } else {
+      // Remove white-navbar class
+      $("nav").removeClass("white-navbar");
+      $("#back-to-home").fadeOut();
+    }
+  });
+});
+
+/*-------------------------------
+            Smooth Scroll
+---------------------------------*/
+
+$(() => {
+  $("a.smooth-scroll").click(function(e) {
+    e.preventDefault();
+    const sectionId = $(this).attr("href");
+    $("html, body").animate(
+      {
+        scrollTop: $(sectionId).offset().top - 64
+      },
+      1200
+    );
+  });
 });

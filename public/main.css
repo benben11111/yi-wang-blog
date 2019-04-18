@@ -4,8 +4,9 @@ body {
 
 /* #navbar */
 .navbar-menu {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
-  padding: 30px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)); */
+  padding: 15px;
+  transition: all 300ms linear;
 }
 
 .menu-item {
@@ -173,4 +174,104 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
+}
+
+/*-------------------------------
+            Preloader
+---------------------------------*/
+#preloader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+#status {
+  background-image: url("./images/preloader.gif");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+/*-------------------------------
+            Arrow-Down
+---------------------------------*/
+#arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  color: black;
+  font-size: 32px;
+}
+
+/*-------------------------------
+            About
+---------------------------------*/
+#about-me-heading {
+  position: relative;
+}
+#about-me {
+  position: relative;
+  padding-top: 75px;
+  animation-name: fadeInLeft;
+}
+#about-penn {
+  position: relative;
+  padding-top: 75px;
+}
+#about-ut {
+  position: relative;
+  padding-top: 75px;
+}
+
+/*-------------------------------
+            Gallery
+---------------------------------*/
+
+.gallery-category {
+  cursor: pointer;
+  user-select: none;
+}
+
+/*-------------------------------
+            Google Map
+---------------------------------*/
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/*-------------------------------
+            White Navbar
+---------------------------------*/
+.white-navbar {
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 8px 6px -9px #999;
+  z-index: 2;
+}
+
+.white-navbar #myNavbar ul li a:hover {
+  color: red;
+}
+
+/*-------------------------------
+            Buttons
+---------------------------------*/
+.btn-back-to-home {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  color: black;
+  display: none;
 }
