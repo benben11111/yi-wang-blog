@@ -1,97 +1,137 @@
-<% include ./partials/header%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Yi's Personal Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-      integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
-  </head>
-  <script>
-      $(document).ready(() => {
-        
-        const blogContent = $("#latestVersion").val();
-        CKEDITOR.instances.blogContent.setData(blogContent);
 
-          $("#submit-button").click(() => {
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Yi's Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <base href="/">
+  <link rel="stylesheet" media="screen" href="main.css" />
+  <link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+</head>
 
-              const title = $("#blogTitle").val();
-              const content = CKEDITOR.instances.blogContent.getData();
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+  <section id="home">
+    <header>
+      <!-- #navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-menu nav-blogs">
+        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-light">Yi's
+            Blog</span></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+          <div class="bg-light line1"></div>
+          <div class="bg-light line2"></div>
+          <div class="bg-light line3"></div>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/" class="nav-link menu-item m-2 text-light h4">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allBlogs" class="nav-link menu-item m-2 text-light h4">Blogs</a>
+            </li>
 
-             const blog ={
-              title,
-              content
-          }
+            <% if(!activeUser) {%>
+            <li class="nav-item">
+              <a href="/login" class="nav-link menu-item m-2 text-light h4">Login</a>
+            </li>
+            <%} else {%>
+            <li class="nav-item">
+              <a href="/myBlogs" class="nav-link menu-item m-2 text-light h4">My Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="/addNewBlog" class="nav-link menu-item m-2 text-light h4">Add New Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signup" class="nav-link menu-item m-2 text-light h4">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a href="/logout" class="nav-link menu-item m-2 text-light h4">Log out</a>
+            </li>
+            <% }%>
+            <li class="nav-item">
+              <a href="/contactMe" class="nav-link menu-item m-2 text-light h4">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-          $.ajax({
-              url: "/allBlogs/<%= targetBlog._id %>",
-              type: "PUT",
-              data: blog
-          })
+      <video class="bg-video video-container-blogs" muted autoplay loop>
+        <source src="videos/blog.mp4" type="video/mp4" />
+      </video>
+      <div class="video-container-blogs-overlay">
+        <div id="welcome-message" class="text-center">
+          <h2 class="animated fadeInDown">Welcome To My Blog</h2>
+          <h4 class="animated fadeInLeft">Find the most authentic ideas here</h4>
+          <button type="button" class="btn btn-light animated fadeInUp">
+            <a href="#blogs" class="smooth-scroll-blogs">Continue</a>
+          </button>
+        </div>
+      </div>
+    </header>
+  </section>
 
-          
-          window.location="/allBlogs/<%= targetBlog._id %>";
-
-          });
-      });
-  </script>
-<div class="container">
+  <div class="container">
     <form style="margin-top: 120px">
-        <h1>Edit Blog</h1>
+      <h1>Edit Blog</h1>
       <div class="form-group">
         <label for="blogTitle">Blog Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="blogTitle"
-          placeholder="Enter text"
-          value="<%=targetBlog.title%>"
-        />
+        <input type="text" class="form-control" id="blogTitle" placeholder="Enter text" value="<%=targetBlog.title%>" />
       </div>
-          <textarea name="editor1" id="blogContent"></textarea>
-          <textarea id="latestVersion" cols="30" rows="10" style="display: none"><%=targetBlog.content%></textarea>
-      
+      <textarea name="editor1" id="blogContent"></textarea>
+      <textarea id="latestVersion" cols="30" rows="10" style="display: none"><%=targetBlog.content%></textarea>
+
     </form>
     <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
 
-</div>
+  </div>
 
-<script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
-<script>
-        CKEDITOR.replace( 'editor1' );
-</script>
-<script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"
-></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-crossorigin="anonymous"
-></script>
-<script
-src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-crossorigin="anonymous"
-></script>
-<!-- <script src="main.js"></script> -->
+  <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('editor1');
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(() => {
+
+      const blogContent = $("#latestVersion").val();
+      CKEDITOR.instances.blogContent.setData(blogContent);
+
+      $("#submit-button").click(() => {
+
+        const title = $("#blogTitle").val();
+        const content = CKEDITOR.instances.blogContent.getData();
+
+        const blog = {
+          title,
+          content
+        }
+
+        $.ajax({
+          url: "/allBlogs/<%= targetBlog._id %>",
+          type: "PUT",
+          data: blog
+        })
+
+
+        window.location = "/allBlogs/<%= targetBlog._id %>";
+
+      });
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+  </script>
+  <script src="main.js"></script>
 </body>
+
 </html>

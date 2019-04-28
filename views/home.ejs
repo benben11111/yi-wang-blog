@@ -1,158 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Yi's Personal Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
-      integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="newsletter.css"
-    />
-  </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="70">
-    <div id="preloader">
-      <div id="status">&nbsp;</div>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Yi's Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="newsletter.css" />
+  <link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+</head>
 
-    <!-- #header -->
-    <section id="home">
-      <header>
-        <!-- #backgroundVideo -->
-        <div class="video-background">
-          <div class="video-container">
-            <video class="bg-video" muted autoplay loop>
-              <source src="videos/Gas-from-Ground.mp4" type="video/mp4" />
-              <!-- <source src="videos/Push-The-Buttons.webm" type="video/webm" /> -->
-            </video>
-          </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+
+  <!-- #header -->
+  <section id="home">
+    <header>
+      <!-- #backgroundVideo -->
+      <div class="video-background">
+        <div class="video-container">
+          <video class="bg-video" muted autoplay loop>
+            <source src="videos/Gas-from-Ground.mp4" type="video/mp4" />
+            <!-- <source src="videos/Push-The-Buttons.webm" type="video/webm" /> -->
+          </video>
         </div>
-        <!--down arrow-->
-        <a href="#about" id="arrow-down" class="smooth-scroll">
-          <i class="fa fa-angle-double-down animated fadeInDown infinite"></i>
-        </a>
-        <!--end down arrow-->
-        <!-- #endBackgroundVideo -->
-        <!-- #navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-menu">
-          <a href="/" class="navbar-brand text-dark text-uppercase"
-            ><span class="h3 font-weight-bold text-dark">Yi's Blog</span></a
-          >
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <div class="bg-light line1"></div>
-            <div class="bg-light line2"></div>
-            <div class="bg-light line3"></div>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold"
-            id="myNavbar"
-          >
-            <ul class="navbar-nav">
+      </div>
+      <!--down arrow-->
+      <a href="#about" id="arrow-down" class="smooth-scroll">
+        <i class="fa fa-angle-double-down animated fadeInDown infinite"></i>
+      </a>
+      <!--end down arrow-->
+      <!-- #endBackgroundVideo -->
+      <!-- #navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-menu">
+        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-dark">Yi's
+            Blog</span></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+          <div class="bg-light line1"></div>
+          <div class="bg-light line2"></div>
+          <div class="bg-light line3"></div>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experiences"
+                class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allBlogs" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#newsletter"
+                class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Newsletter</a>
+            </li>
+
+            <% if(!activeUser){%>
+
+            <li class="nav-item">
+              <a href="/login" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signup" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Sign Up</a>
+            </li>
+
+            <%} else {%>
+
+            <li class="nav-item">
+              <a href="/myBlogs" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">My Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="/logout" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Log out</a>
+            </li>
+
+            <%}%>
               <li class="nav-item">
                 <a
-                  href="/"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#about"
+                  href="#contact"
                   class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#gallery"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll"
-                  >Gallery</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="/allBlogs"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >Blogs</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="#newsletter"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll"
-                  >Newsletter</a
-                >
-              </li>
-
-              <% if(!activeUser){%>
-
-              <li class="nav-item">
-                <a
-                  href="/login"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >Login</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="/signup"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >Sign Up</a
-                >
-              </li>
-
-              <%} else {%>
-
-              <li class="nav-item">
-                <a
-                  href="/myBlogs"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >My Blog</a
-                >
-              </li>
-
-              <li class="nav-item">
-                <a
-                  href="/logout"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
-                  >Log out</a
-                >
-              </li>
-
-              <%}%>
-              <li class="nav-item">
-                <a
-                  href="/contactMe"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold"
                   >Contact</a
                 >
               </li>
@@ -168,6 +112,28 @@
           <p class="lead banner-paragraph">
             Let me tell you more about me...
           </p>
+          <ul id="social-media-icon" class="banner-social-media">
+            <li>
+              <a href="https://www.linkedin.com/in/yi-wang-81473b60/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/wangyi_benben1/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/wangyidahaoren"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Yi_Wang_NYC"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+            </li>
+          </ul>
         </div>
         <!-- #endbanner -->
       </header>
@@ -245,6 +211,112 @@
 
     </div>
   </div> -->
+    <!-- #experience -->
+    <section class="my-experience py-5" id="experiences">
+      <div class="container-fluid">
+        <div class="text-center text-black animated bounceInLeft smooth-scroll">
+          <h1 class="text-uppercase">My Experience</h1>
+          <div class="underline mb-5"></div>
+        </div>
+        <div class="experiences">
+          <div id="experience-tabs" class="text-center">
+            <ul class="smooth-scroll animated bounceInRight">
+              <li><a href="#cybersecurity">cybersecurity</a></li>
+              <li><a href="#united-nations">united nations</a></li>
+              <li><a href="#wall-street">wall street</a></li>
+              <li><a href="#risk-assurance">risk assurance</a></li>
+            </ul>
+
+            <div id="cybersecurity">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="images/Deloitte-Logo.image.jpg"
+                    alt="Deloitte-Logo"
+                    width="350"
+                    class="image-fluid deloitte-logo mb-5"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <h1>Cybersecurity Consultant</h1>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
+                    qui dignissimos, optio provident soluta delectus nulla nam
+                    suscipit sit fuga, quam aperiam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="united-nations">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="images/Flag-United-Nations-Logo.jpg"
+                    alt="United-Nations-Logo"
+                    width="350"
+                    class="image-fluid un-logo mb-5"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <h1>Financial Analyst</h1>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
+                    qui dignissimos, optio provident soluta delectus nulla nam
+                    suscipit sit fuga, quam aperiam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="wall-street">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="images/RBC-Capital-Markets-Logo.jpe"
+                    alt="RBC-Logo"
+                    width="350"
+                    class="image-fluid rbc-logo mb-5"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <h1>Risk Management Analyst</h1>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
+                    qui dignissimos, optio provident soluta delectus nulla nam
+                    suscipit sit fuga, quam aperiam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="risk-assurance">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    src="images/PwC-Logo.JPG"
+                    alt="Deloitte-Logo"
+                    width="350"
+                    class="image-fluid pwc-logo mb-5"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <h1>Risk Assurance Associate</h1>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
+                    qui dignissimos, optio provident soluta delectus nulla nam
+                    suscipit sit fuga, quam aperiam.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #myExperienceContent -->
+    </section>
+    <!-- #endExperience -->
 
     <section id="gallery" class="py-5">
       <div class="container-fluid">
@@ -272,7 +344,75 @@
             Travel
           </li>
         </ul>
-        <div class="container-fluid">
+
+        <div id="gallery-row">
+            <div class="row">
+                <div class="column" id="gallery-column">
+                    <div class="filter food">
+                        <img src="images/food-0.JPG" alt="food" width="300px" />
+                      </div>
+                      <div class="filter travel">
+                          <img src="images/travel-2.JPG" alt="travel" width="300px" />
+                        </div>
+                      
+                      <div class="filter food">
+                        <img src="images/food-2.JPG" alt="food" width="300px" />
+                      </div>
+                      <div class="filter travel">
+                          <img src="images/travel-4.JPG" alt="travel" width="300px" />
+                        </div>
+                </div>
+                <div class="column" id="gallery-column">
+                    <div class="filter food">
+                        <img src="images/food-4.JPG" alt="food" width="300px" />
+                      </div>
+                      <div class="filter travel">
+                        <img src="images/travel-0.JPG" alt="travel" width="300px" />
+                      </div>
+                      <div class="filter food">
+                          <img src="images/food-1.JPG" alt="food" width="300px" />
+                        </div>
+                      <div class="filter travel">
+                        <img src="images/travel-1.JPG" alt="travel" width="300px" />
+                      </div>
+                     
+                </div>
+                <div class="column" id="gallery-column">
+                    <div class="filter travel">
+                        <img src="images/travel-3.JPG" alt="travel" width="300px" />
+                      </div>
+                     
+                      <div class="filter food">
+                        <img src="images/food-5.jpg" alt="food" width="300px" />
+                      </div>
+                      <div class="filter food">
+                        <img src="images/food-6.jpg" alt="food" width="300px" />
+                      </div>
+                </div>
+                <div class="column" id="gallery-column">
+                    <div class="filter food">
+                        <img src="images/food-7.jpg" alt="food" width="300px" />
+                      </div>
+                      <div class="filter food">
+                          <img src="images/food-3.JPG" alt="food" width="300px" />
+                        </div>
+                      <div class="filter food">
+                        <img src="images/food-8.jpg" alt="food" width="300px" />
+                      </div>
+                      <div class="filter food">
+                        <img src="images/food-9.jpg" alt="food" width="300px" />
+                      </div>
+                </div>
+                     
+      
+                </div>
+              </div>
+
+        </div>
+        
+
+
+        <!-- <div class="container-fluid">
           <div class="d-flex flex-wrap justify-content-center">
             <div class="filter food">
               <img src="images/food-0.JPG" alt="food" width="300px" />
@@ -320,25 +460,16 @@
               <img src="images/food-9.jpg" alt="food" width="300px" />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <!-- #experience -->
-    <section class="my-experience py-5">
+    <!--Google Map-->
+    <!-- <section id="google-map" class="py-5">
       <div class="container-fluid">
-        <!-- #myExperienceHeading -->
-        <!-- <div class="row text-black text-center">
-          <div class="col">
-            <h1 class="display-4 text-uppercase mt-4 mb-4">
-              My Experience
-            </h1>
-            <div class="underline mb-5"></div>
-          </div>
-        </div> -->
         <div class="row text-center text-black">
           <div class="col-m-4">
-            <h1 class="text-uppercase">My Experience</h1>
+            <h1 class="text-uppercase">Where I am</h1>
             <div class="underline mb-5"></div>
             <p class="lead">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
@@ -346,87 +477,11 @@
               porro aut, molestias optio.
             </p>
           </div>
-        </div>
-        <!-- #endMyExperienceHeading -->
-      </div>
-      <!-- #myExperienceContent -->
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 text-center">
-            <img
-              src="images/Deloitte-Logo.image.jpg"
-              alt="Deloitte-Logo"
-              width="350"
-              class="image-fluid deloitte-logo mb-5"
-            />
-          </div>
-          <div
-            class="col-lg-7 text-black text-lg-right text-center deloitte-text"
-          >
-            <h1>Cybersecurity Consultant</h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              eos autem modi ipsam quas dolorum voluptas officia qui
-              dignissimos, optio provident soluta delectus nulla nam suscipit
-              sit fuga, quam aperiam.
-            </p>
-          </div>
-          <div class="col-lg-5 text-center">
-            <img
-              src="images/Flag-United-Nations-Logo.jpg"
-              alt="United-Nations-Logo"
-              width="350"
-              class="image-fluid un-logo mb-5"
-            />
-          </div>
-          <div class="col-lg-7 text-black text-lg-right text-center un-text">
-            <h1>Financial Analyst</h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              eos autem modi ipsam quas dolorum voluptas officia qui
-              dignissimos, optio provident soluta delectus nulla nam suscipit
-              sit fuga, quam aperiam.
-            </p>
-          </div>
-          <div class="col-lg-5 text-center">
-            <img
-              src="images/RBC-Capital-Markets-Logo.jpe"
-              alt="RBC-Logo"
-              width="350"
-              class="image-fluid rbc-logo mb-5"
-            />
-          </div>
-          <div class="col-lg-7 text-black text-lg-right text-center rbc-text">
-            <h1>Risk Management Analyst</h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              eos autem modi ipsam quas dolorum voluptas officia qui
-              dignissimos, optio provident soluta delectus nulla nam suscipit
-              sit fuga, quam aperiam.
-            </p>
-          </div>
-          <div class="col-lg-5 text-center">
-            <img
-              src="images/PwC-Logo.JPG"
-              alt="Deloitte-Logo"
-              width="350"
-              class="image-fluid pwc-logo mb-5"
-            />
-          </div>
-          <div class="col-lg-7 text-black text-lg-right text-center pwc-text">
-            <h1>Risk Assurance Associate</h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              eos autem modi ipsam quas dolorum voluptas officia qui
-              dignissimos, optio provident soluta delectus nulla nam suscipit
-              sit fuga, quam aperiam.
-            </p>
-          </div>
+          <div id="map"></div>
         </div>
       </div>
-      <!-- #endMyExperienceContent -->
-    </section>
-    <!-- #endExperience -->
+    </section> -->
+
     <!--#newsletter-->
     <section class="container subscription" id="newsletter">
       <div class="container-fluid">
@@ -452,24 +507,64 @@
       </form>
     </section>
 
-    <!--Google Map-->
-    <section id="google-map" class="py-5">
-      <div class="container-fluid">
-        <div class="row text-center text-black">
-          <div class="col-m-4">
-            <h1 class="text-uppercase">Where I am</h1>
-            <div class="underline mb-5"></div>
-            <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              aspernatur eveniet accusantium ad distinctio incidunt doloremque
-              porro aut, molestias optio.
-            </p>
-          </div>
-          <div id="map"></div>
+    <section id="contact" class="py-5 container">
+      <!-- <div class="container-fluid"> -->
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div id="google-map">
+             
+                <div class="text-black">
+                  
+                    <h1 class="text-uppercase">Where I am</h1>
+                    <div class="underline mb-5"></div>
+                  
+                  <div id="map" class="text-center"></div>
+                </div>
+              
+            </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <form action="/contactMe" method="POST" class="contact-form">
+                <h1>Drop Me A Message</h1>
+                <div class="underline mb-5"></div>
+                <div class="form-group pt-5">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Your Name"
+                    name="username"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Your Email"
+                    name="userEmail"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Your Message"
+                    name="userMessage"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+              </form>
+            </div>
         </div>
-      </div>
+      <!-- </div> -->
     </section>
-    <footer class="text-center">
+
+    <footer class="text-center text-light">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -483,7 +578,7 @@
       <a
         href="#home"
         id="back-to-home"
-        class="btn btn-sm btm-dark btn-back-to-home smooth-scroll animated fadeInUp infinite"
+        class="btn btn-sm btm-dark btn-back-to-home smooth-scroll"
         title="home"
         role="button"
       >
@@ -511,6 +606,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP5UTFMiOPMMjSHN1Imhf4BQKb0XwJ0Jg&callback=initMap"
       type="text/javascript"
     ></script>
+    <script src="jquery.responsiveTabs.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
