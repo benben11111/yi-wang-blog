@@ -84,12 +84,12 @@ $(() => {
   $(window).scroll(() => {
     if ($(window).scrollTop() > 50) {
       // Add white-navbar class
-      $("nav").addClass("white-navbar");
+      $("nav").addClass("black-navbar");
       // Show back to home button
       $("#back-to-home").fadeIn();
     } else {
       // Remove white-navbar class
-      $("nav").removeClass("white-navbar");
+      $("nav").removeClass("black-navbar");
       $("#back-to-home").fadeOut();
     }
   });

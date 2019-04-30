@@ -30,11 +30,12 @@
       <div class="video-background">
         <div class="video-container">
           <video class="bg-video" muted autoplay loop>
-            <source src="videos/Gas-from-Ground.mp4" type="video/mp4" />
+            <source src="videos/home.mp4" type="video/mp4" />
             <!-- <source src="videos/Push-The-Buttons.webm" type="video/webm" /> -->
           </video>
         </div>
       </div>
+      <div class="homepage-bg-video-overlay"></div>
       <!--down arrow-->
       <a href="#about" id="arrow-down" class="smooth-scroll">
         <i class="fa fa-angle-double-down animated fadeInDown infinite"></i>
@@ -43,7 +44,7 @@
       <!-- #endBackgroundVideo -->
       <!-- #navbar -->
       <nav class="navbar navbar-expand-lg fixed-top navbar-menu">
-        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-dark">Yi's
+        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-light">Yi's
             Blog</span></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
           <div class="bg-light line1"></div>
@@ -53,50 +54,46 @@
         <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="/" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Home</a>
+              <a href="/" class="nav-link menu-item m-2 text-light h4 font-weight-bold">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">About</a>
+              <a href="#about" class="nav-link menu-item m-2 text-light h4 font-weight-bold smooth-scroll">About</a>
             </li>
             <li class="nav-item">
               <a href="#experiences"
-                class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Experiences</a>
+                class="nav-link menu-item m-2 text-light h4 font-weight-bold smooth-scroll">Experiences</a>
             </li>
             <li class="nav-item">
-              <a href="#gallery" class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Gallery</a>
+              <a href="#gallery" class="nav-link menu-item m-2 text-light h4 font-weight-bold smooth-scroll">Gallery</a>
             </li>
             <li class="nav-item">
-              <a href="/allBlogs" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a href="#newsletter"
-                class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll">Newsletter</a>
+              <a href="/allBlogs" class="nav-link menu-item m-2 text-light h4 font-weight-bold">Blogs</a>
             </li>
 
             <% if(!activeUser){%>
 
             <li class="nav-item">
-              <a href="/login" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Login</a>
+              <a href="/login" class="nav-link menu-item m-2 text-light h4 font-weight-bold">Login</a>
             </li>
             <li class="nav-item">
-              <a href="/signup" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Sign Up</a>
+              <a href="/signup" class="nav-link menu-item m-2 text-light h4 font-weight-bold">Sign Up</a>
             </li>
 
             <%} else {%>
 
             <li class="nav-item">
-              <a href="/myBlogs" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">My Blog</a>
+              <a href="/myBlogs" class="nav-link menu-item m-2 text-light h4 font-weight-bold">My Blog</a>
             </li>
 
             <li class="nav-item">
-              <a href="/logout" class="nav-link menu-item m-2 text-dark h4 font-weight-bold">Log out</a>
+              <a href="/logout" class="nav-link menu-item m-2 text-light h4 font-weight-bold">Log out</a>
             </li>
 
             <%}%>
               <li class="nav-item">
                 <a
                   href="#contact"
-                  class="nav-link menu-item m-2 text-dark h4 font-weight-bold smooth-scroll"
+                  class="nav-link menu-item m-2 text-light h4 font-weight-bold smooth-scroll"
                   >Contact</a
                 >
               </li>
@@ -105,11 +102,11 @@
         </nav>
         <!-- #endnavbar -->
         <!-- #banner -->
-        <div class="banner text-center text-md-right text-light">
-          <h1 class="display-4 banner-heading">
+        <div class="banner text-center text-md-right">
+          <h1 class="display-4 banner-heading text-light">
             Hi! My name is <span class="text-uppercase">Yi Wang</span>.
           </h1>
-          <p class="lead banner-paragraph">
+          <p class="lead banner-paragraph text-light">
             Let me tell you more about me...
           </p>
           <ul id="social-media-icon" class="banner-social-media">
@@ -159,19 +156,17 @@
               class="image-fluid img-thumbnail"
             />
           </div>
-          <div id="about-me" class="col-md-9 text-md-right text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ea
-            nesciunt dicta placeat at quia sunt laboriosam impedit tempora.
-            Consequatur animi repellat tenetur repellendus nulla laudantium
-            adipisci culpa ab soluta!
+          <div id="about-me" class="col-md-9 text-md-left text-center">
+            <span class="display-1">B</span>orn and raised in <span class="display-4">China</span>. Many interests: food, travel, reading, running, cycling, gym, friends, 
+            coffee, tea, fashion, shopping, etc. Interned in many industries and will never stop exploring my passions
+            and new life goals. Fun fact (actually not sure if it's fun): I still can't pronounce my first name (Yi) right
+            in English after having lived in the US for <span class="display-3">7</span> years. For this reason, <span class="display-3">"E"</span> is short for my name. 
           </div>
         </div>
         <div class="row wow fadeInRight" data-wow-duration="1s">
           <div id="about-penn" class="col-md-9 text-md-left text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ea
-            nesciunt dicta placeat at quia sunt laboriosam impedit tempora.
-            Consequatur animi repellat tenetur repellendus nulla laudantium
-            adipisci culpa ab soluta!
+              <span class="display-1">I</span>n Fall 2017, started my master's degree in Computer and Information at the University of Pennsylvania. 
+            Never imagined myself becoming a full-stack web <span class="display-3">developer</span>, but here I am! 
           </div>
           <div id="about-penn-logo" class="col-md-3">
             <img
@@ -189,11 +184,9 @@
               class="image-fluid img-thumbnail"
             />
           </div>
-          <div id="about-ut" class="col-md-9 text-md-right text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ea
-            nesciunt dicta placeat at quia sunt laboriosam impedit tempora.
-            Consequatur animi repellat tenetur repellendus nulla laudantium
-            adipisci culpa ab soluta!
+          <div id="about-ut" class="col-md-9 text-md-left text-center">
+            <span class="display-1">T</span>his one was fun. Once a <span class="display-3">Longhorn</span>, forver a Longhorn. Besides enjoying Austin's vibe, culture, and people while 
+            attending UT Austin from 2012 to 2016, I did get a bachelor's degree in <span class="display-3">Finance</span> from McCombs School of Business. 
           </div>
         </div>
       </div>
@@ -237,13 +230,13 @@
                     class="image-fluid deloitte-logo mb-5"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 mt-3">
                   <h1>Cybersecurity Consultant</h1>
                   <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
-                    qui dignissimos, optio provident soluta delectus nulla nam
-                    suscipit sit fuga, quam aperiam.
+                    Traveled all the over the US for clients' projects, intern conference, and new hire trainings.
+                    Love the lifestyle. Got to know people from different offices and converse with clients. Will go back 
+                    full time starting in September 2019. Can't wait to begin my career at one of the greatest consulting
+                    companies in the world!
                   </p>
                 </div>
               </div>
@@ -252,19 +245,18 @@
               <div class="row">
                 <div class="col-md-6">
                   <img
-                    src="images/Flag-United-Nations-Logo.jpg"
+                    src="images/UN-logo.jpg"
                     alt="United-Nations-Logo"
                     width="350"
                     class="image-fluid un-logo mb-5"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 mt-3">
                   <h1>Financial Analyst</h1>
                   <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
-                    qui dignissimos, optio provident soluta delectus nulla nam
-                    suscipit sit fuga, quam aperiam.
+                    This was definitely a Dream Come True! Had always wanted to work for at least some time at UN. I have to say that it was a complete
+                    honor to have the opportunity to work under the UN General Assembly in New York City. Not only this has reshaped
+                    the way I see the world but also I will utilize what I learned at UN into my future career.
                   </p>
                 </div>
               </div>
@@ -279,13 +271,12 @@
                     class="image-fluid rbc-logo mb-5"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 mt-3">
                   <h1>Risk Management Analyst</h1>
                   <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
-                    qui dignissimos, optio provident soluta delectus nulla nam
-                    suscipit sit fuga, quam aperiam.
+                    Located in the 3 World Trade Center in Downtown Manhattan, I had a taste of what it's like to work on Wall Street. 
+                    Just as I thought, it was full of ambition, nervousness, and determination. Despite the fact that I learned a lot,
+                    I decided to go with technology and consulting.
                   </p>
                 </div>
               </div>
@@ -300,13 +291,12 @@
                     class="image-fluid pwc-logo mb-5"
                   />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 mt-3">
                   <h1>Risk Assurance Associate</h1>
                   <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis eos autem modi ipsam quas dolorum voluptas officia
-                    qui dignissimos, optio provident soluta delectus nulla nam
-                    suscipit sit fuga, quam aperiam.
+                    First internship in the world of corporate America. Got me into the door of finance, consulting, and information
+                    technology. Had a chance to visit Disney World sponsored by PwC after the internship. Really appreciate the 
+                    investment that PwC has made to its employees.
                   </p>
                 </div>
               </div>
@@ -321,13 +311,11 @@
     <section id="gallery" class="py-5">
       <div class="container-fluid">
         <div class="row text-center text-black">
-          <div class="col-m-4">
+          <div class="col-md-6 offset-3">
             <h1 class="text-uppercase">Gallery</h1>
             <div class="underline mb-5"></div>
             <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              aspernatur eveniet accusantium ad distinctio incidunt doloremque
-              porro aut, molestias optio.
+              Once I start working, most my income goes to...
             </p>
           </div>
         </div>
@@ -388,6 +376,9 @@
                       <div class="filter food">
                         <img src="images/food-6.jpg" alt="food" width="300px" />
                       </div>
+                      <div class="filter travel">
+                          <img src="images/travel-5.jpg" alt="food" width="300px" />
+                        </div>
                 </div>
                 <div class="column" id="gallery-column">
                     <div class="filter food">
@@ -396,12 +387,18 @@
                       <div class="filter food">
                           <img src="images/food-3.JPG" alt="food" width="300px" />
                         </div>
-                      <div class="filter food">
+                      <!-- <div class="filter food">
                         <img src="images/food-8.jpg" alt="food" width="300px" />
                       </div>
                       <div class="filter food">
                         <img src="images/food-9.jpg" alt="food" width="300px" />
-                      </div>
+                      </div> -->
+                      <div class="filter travel">
+                          <img src="images/travel-6.jpg" alt="food" width="300px" />
+                        </div>
+                        <div class="filter travel">
+                            <img src="images/travel-7.jpg" alt="food" width="300px" />
+                          </div>
                 </div>
                      
       
@@ -483,9 +480,9 @@
     </section> -->
 
     <!--#newsletter-->
-    <section class="container subscription" id="newsletter">
+    <!-- <section class="container subscription" id="newsletter">
       <div class="container-fluid">
-        <!-- #myExperienceHeading -->
+        
         <div class="row text-black text-center">
           <div class="col">
             <h1 class="display-4 text-uppercase mt-4 mb-4">
@@ -494,7 +491,7 @@
             <div class="underline mb-5"></div>
           </div>
         </div>
-        <!-- #endMyExperienceHeading -->
+        
       </div>
       <form action="/subscribe" method="POST">
         <div class="container" style="background-color:white">
@@ -505,7 +502,7 @@
           <input type="submit" value="Subscribe" />
         </div>
       </form>
-    </section>
+    </section> -->
 
     <section id="contact" class="py-5 container">
       <!-- <div class="container-fluid"> -->
@@ -536,16 +533,19 @@
                     aria-describedby="emailHelp"
                     placeholder="Your Name"
                     name="username"
+                    required
                   />
                 </div>
                 <div class="form-group">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder="Your Email"
                     name="userEmail"
+                    style="width: 535px; height: 50px"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -555,6 +555,7 @@
                     id="exampleInputPassword1"
                     placeholder="Your Message"
                     name="userMessage"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
@@ -568,6 +569,36 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+              <h5 class="text-uppercase">
+                  Subscribe to my Newsletter
+                </h5>
+                <!-- <form action="/subscribe" method="POST" class="form-inline">
+                  <div class="container" style="background-color:white">
+                    <input type="text" placeholder="Name" name="name"/>
+                    <input type="text" placeholder="Email address" name="email"/>
+                  </div>
+                  <div class="container">
+                    <input type="submit" value="Subscribe" />
+                  </div>
+                </form> -->
+                <form action="/subscribe" method="POST" style="border: none">
+                  <div class="row">
+                      <!-- <div class="form-group"> -->
+                          <div class="col-sm-5">
+                              <input type="text" placeholder="Name" name="name" required/>
+                          </div>
+                          <div class="col-sm-5" style="padding-top: 8px">
+                              <input type="email" style="width: 440.83px; height: 50px" placeholder="Email address" name="email" required/>
+                          </div>
+                          <div class="col-sm-2">
+                              <input type="submit" value="Subscribe" />
+                          </div>
+      
+                        <!-- </div> -->
+
+                  </div>
+                 
+                </form>
             <p>
               Copyright &copy; 2019 All Rights Reserved By
               <span>Yi's Blog</span>
