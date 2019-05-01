@@ -20,7 +20,7 @@
     <header>
       <!-- #navbar -->
       <nav class="navbar navbar-expand-lg fixed-top navbar-menu nav-blogs">
-        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-light">Yi's
+        <a href="/" class="navbar-brand text-dark text-uppercase"><span class="h3 font-weight-bold text-dark">Yi's
             Blog</span></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
           <div class="bg-light line1"></div>
@@ -30,49 +30,36 @@
         <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="/" class="nav-link menu-item m-2 text-light h4">Home</a>
+              <a href="/" class="nav-link menu-item m-2 text-dark h4">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/allBlogs" class="nav-link menu-item m-2 text-light h4">Blogs</a>
+              <a href="/allBlogs" class="nav-link menu-item m-2 text-dark h4">Blogs</a>
             </li>
 
             <% if(!activeUser) {%>
             <li class="nav-item">
-              <a href="/login" class="nav-link menu-item m-2 text-light h4">Login</a>
+              <a href="/login" class="nav-link menu-item m-2 text-dark h4">Login</a>
             </li>
             <%} else {%>
             <li class="nav-item">
-              <a href="/myBlogs" class="nav-link menu-item m-2 text-light h4">My Blog</a>
+              <a href="/myBlogs" class="nav-link menu-item m-2 text-dark h4">My Blog</a>
             </li>
             <li class="nav-item">
-              <a href="/addNewBlog" class="nav-link menu-item m-2 text-light h4">Add New Blog</a>
+              <a href="/addNewBlog" class="nav-link menu-item m-2 text-dark h4">Add New Blog</a>
             </li>
             <li class="nav-item">
-              <a href="/signup" class="nav-link menu-item m-2 text-light h4">Sign Up</a>
+              <a href="/signup" class="nav-link menu-item m-2 text-dark h4">Sign Up</a>
             </li>
             <li class="nav-item">
-              <a href="/logout" class="nav-link menu-item m-2 text-light h4">Log out</a>
+              <a href="/logout" class="nav-link menu-item m-2 text-dark h4">Log out</a>
             </li>
             <% }%>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="/contactMe" class="nav-link menu-item m-2 text-light h4">Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
-
-      <video class="bg-video video-container-blogs" muted autoplay loop>
-        <source src="videos/blog.mp4" type="video/mp4" />
-      </video>
-      <div class="video-container-blogs-overlay">
-        <div id="welcome-message" class="text-center">
-          <h2 class="animated fadeInDown">Welcome To My Blog</h2>
-          <h4 class="animated fadeInLeft">Find the most authentic ideas here</h4>
-          <button type="button" class="btn btn-light animated fadeInUp">
-            <a href="#blogs" class="smooth-scroll-blogs">Continue</a>
-          </button>
-        </div>
-      </div>
     </header>
   </section>
 
